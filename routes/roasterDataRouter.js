@@ -12,6 +12,6 @@ router.post("/", roasterController.createRoaster)
 
 router.put("/:companyName", roasterController.updateRoaster)
 
-router.delete("/:companyName", roasterController.deleteRoaster)
+router.delete("/:id", roasterController.deleteRoaster)
 
 module.exports = router

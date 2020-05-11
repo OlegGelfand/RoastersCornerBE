@@ -5,6 +5,7 @@ const RoasterSchema = new Schema({
     companyName: String,
     memberDate: { type: String, default: new Date() },
     location: String,
+    image: String,
     body: String,
     numOrders: { type: Number, default: 0 },
     coffees: [
