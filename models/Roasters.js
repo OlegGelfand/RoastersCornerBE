@@ -3,7 +3,7 @@ const Schema = mongoose.Schema
 
 const RoasterSchema = new Schema({
     companyName: String,
-    memberDate: { type: Date, default: Date.now },
+    Date: { type: Date, default: Date.now },
     location: String,
     image: String,
     body: String,
