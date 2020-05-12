@@ -4,6 +4,7 @@ const Coffee = require("../models/Coffee")
 
 const getAllCoffee = (req, res) => {
     Coffee.find({}).then(coffees => {
+        console.log("this is coffees",coffees)
         res.json(coffees)
     }).catch(err => {
         console.log(err)
