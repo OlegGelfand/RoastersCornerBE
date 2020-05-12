@@ -19,8 +19,11 @@ const coffeeDataRouter = require("./routes/coffeeDataRouter")
 app.use('/coffees', coffeeDataRouter)
 
 // app.use('/users', require('.routes/users'))
-app.set("port", process.env.PORT || 8080)
+// app.set("port", process.env.PORT || 8080)
 
-app.listen(app.get("port"), () => {
-    console.log(`✅ PORT: ${app.get("port")} 🌟`)
-})
+// app.listen(app.get("port"), () => {
+//     console.log(`✅ PORT: ${app.get("port")} 🌟`)
+// })
+
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
