@@ -1,5 +1,6 @@
 const express = require("express")
 const router = express.Router()
+
 const roasterController = require("../controllers/roasterController")
 
 router.get("/", roasterController.getAllRoasters)
