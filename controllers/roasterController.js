@@ -1,5 +1,5 @@
 const Roaster = require("../models/Roasters")
-// const Chirp = require("../models/Chirp")
+const Coffee= require("../models/Coffee")
 
 
 const getAllRoasters = (req, res) => {
@@ -64,6 +64,10 @@ const deleteRoaster = async (req, res) => {
         res.send(`Could not delete roaster with ID: "${req.params.id}"`)
     })
 }
+
+
+
+
 
 module.exports = {
     getAllRoasters,
