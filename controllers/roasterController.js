@@ -51,12 +51,6 @@ const updateRoaster = (req, res) => {
 
 const deleteRoaster = async (req, res) => {
     const roaster = await Roaster.findOne({ _id: req.params.id })
-
-    // await Chirp.findOne({ _id: roaster.reChirp }).then(chirp => {
-    //     chirp.comments.splice(chirp.comments.indexOf(req.params.id), 1)
-    //     chirp.save()
-    // })
-
     roaster.delete().then(roaster => {
         res.send(`${roaster.companyName}'s comment "${roaster.body}" has been deleted`)
     }).catch(err => {

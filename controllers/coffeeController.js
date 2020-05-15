@@ -51,12 +51,6 @@ const updateCoffee = (req, res) => {
 
 const deleteCoffee = async (req, res) => {
     const coffee = await Coffee.findOne({ _id: req.params.id })
-
-    // await Chirp.findOne({ _id: roaster.reChirp }).then(chirp => {
-    //     chirp.comments.splice(chirp.comments.indexOf(req.params.id), 1)
-    //     chirp.save()
-    // })
-
     coffee.delete().then(coffee => {
         res.send(`${coffee.coffeeName}'s comment "${roaster.body}" has been deleted`)
     }).catch(err => {

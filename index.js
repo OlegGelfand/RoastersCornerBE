@@ -12,9 +12,9 @@ app.use(express.json({extended: false}));
 
 
 
-app.get("/", (req, res) => {
-    res.redirect("/");
-  });
+// app.get("/", (req, res) => {
+//     res.redirect("/");
+//   });
 const roasterDataRouter = require("./routes/roasterDataRouter")
 app.use('/roasters', roasterDataRouter)
 
